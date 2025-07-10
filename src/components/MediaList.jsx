@@ -15,9 +15,9 @@ const MediaList = () => {
     const fetchAll = async () => {
       try {
         const [animeRes, mangaRes, novelRes] = await Promise.all([
-          fetch("http://localhost:3001/api/animelist"),
-          fetch("http://localhost:3001/api/mangalist"),
-          fetch("http://localhost:3001/api/novellist"),
+          fetch("/api/animelist"),
+          fetch("/api/mangalist"),
+          fetch("/api/novellist"),
         ])
         const [anime, manga, novel] = await Promise.all([
           animeRes.json(),
